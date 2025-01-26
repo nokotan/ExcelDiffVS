@@ -1,0 +1,3 @@
+[$RootKey$\TeamFoundation\SourceControl\DiffTools\.xlsx\Compare]
+"Arguments"=""
+"Command"="$PackageFolder$\KamenokoSoft.ExcelDiff.dll"
