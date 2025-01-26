@@ -6,4 +6,4 @@ This extension provides a simple diff for Microsoft Excel Files (.xlsx).
 
 ## Installation
 
-
+* [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=KamenokoSoft.excel-diff)
