@@ -33,8 +33,22 @@ namespace KamenokoSoft.ExcelDiff
         {
             var tmpFilePath = Path.GetTempFileName();
 
-            var writer = new StreamWriter(tmpFilePath);
-            var stream = File.OpenRead(fileName);
+            FileStream stream;
+
+            try
+            {
+                stream = File.Open(fileName, FileMode.Open, FileAccess.Read);
+            }
+            catch (IOException)
+            {
+                // second attempt: copy file and read
+                var tmpCopyFilePath = Path.GetTempFileName();
+                File.Copy(fileName, tmpCopyFilePath, true);
+
+                stream = File.Open(tmpCopyFilePath, FileMode.Open, FileAccess.Read);
+            }
+
+            var writer = new StreamWriter(tmpFilePath, false, System.Text.Encoding.UTF8);
             var reader = ExcelReaderFactory.CreateReader(stream);
 
             try
@@ -64,7 +78,7 @@ namespace KamenokoSoft.ExcelDiff
             {
                 reader.Dispose();
                 writer.Close();
-                stream.Dispose();
+                stream?.Dispose();
             }
 
             return tmpFilePath;

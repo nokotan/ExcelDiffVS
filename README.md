@@ -2,6 +2,8 @@
 
 This extension provides a simple diff for Microsoft Excel Files (.xlsx).
 
+Currently only TFS is supported.
+
 ![diff screenshot](./art/diff.png)
 
 ## Installation
