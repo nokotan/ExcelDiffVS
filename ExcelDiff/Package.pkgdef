@@ -1,3 +1,15 @@
 [$RootKey$\TeamFoundation\SourceControl\DiffTools\.xlsx\Compare]
 "Arguments"=""
 "Command"="$PackageFolder$\KamenokoSoft.ExcelDiff.dll"
+
+[$RootKey$\TeamFoundation\SourceControl\DiffTools\.xlm\Compare]
+"Arguments"=""
+"Command"="$PackageFolder$\KamenokoSoft.ExcelDiff.dll"
+
+[$RootKey$\TeamFoundation\SourceControl\DiffTools\.xls\Compare]
+"Arguments"=""
+"Command"="$PackageFolder$\KamenokoSoft.ExcelDiff.dll"
+
+[$RootKey$\TeamFoundation\SourceControl\DiffTools\.xlsm\Compare]
+"Arguments"=""
+"Command"="$PackageFolder$\KamenokoSoft.ExcelDiff.dll"

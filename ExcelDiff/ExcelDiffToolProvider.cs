@@ -8,7 +8,7 @@ namespace KamenokoSoft.ExcelDiff
 {
     public class ExcelDiffToolProvider : IToolProvider
     {
-        public string Extension => ".xlsx";
+        public virtual string Extension => ".xlsx";
 
         public ToolOperations Operation => ToolOperations.Compare;
 
@@ -83,6 +83,21 @@ namespace KamenokoSoft.ExcelDiff
 
             return tmpFilePath;
         }
+    }
+
+    public class XlsmDiffToolProvider : ExcelDiffToolProvider
+    {
+        public override string Extension => ".xlsm";
+    }
+
+    public class XlsDiffToolProvider : ExcelDiffToolProvider
+    {
+        public override string Extension => ".xls";
+    }
+
+    public class XlmDiffToolProvider : ExcelDiffToolProvider
+    {
+        public override string Extension => ".xlm";
     }
 
     public class EmptyToolExecution : IToolExecutionResult
